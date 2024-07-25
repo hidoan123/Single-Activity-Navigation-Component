@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/screenFragment">
+
+    <fragment
+        android:id="@+id/screenFragment"
+        android:name="com.example.quizzapp.ui.fragment.screenfragment.ScreenFragment"
+        android:label="fragment_screen"
+        tools:layout="@layout/fragment_screen" >
+        <action
+            android:id="@+id/action_screenFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inputnameFragment"
+        android:name="com.example.quizzapp.ui.fragment.inputnamefragment.InputnameFragment"
+        android:label="fragment_inputname"
+        tools:layout="@layout/fragment_inputname" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.quizzapp.ui.fragment.homefragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_playFragment"
+            app:destination="@id/playFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/winFragment"
+        android:name="com.example.quizzapp.ui.fragment.winfragment.WinFragment"
+        android:label="fragment_win"
+        tools:layout="@layout/fragment_win" >
+        <action
+            android:id="@+id/action_winFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_winFragment_to_highscoreFragment"
+            app:destination="@id/highscoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/highscoreFragment"
+        android:name="com.example.quizzapp.ui.fragment.hightscorefragment.HighscoreFragment"
+        android:label="fragment_highscore"
+        tools:layout="@layout/fragment_highscore" />
+    <fragment
+        android:id="@+id/playFragment"
+        android:name="com.example.quizzapp.ui.fragment.playfragment.PlayFragment"
+        android:label="fragment_play"
+        tools:layout="@layout/fragment_play" >
+        <action
+            android:id="@+id/action_playFragment_to_winFragment"
+            app:destination="@id/winFragment" />
+    </fragment>
+</navigation>
