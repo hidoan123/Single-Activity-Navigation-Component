@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("kotlin-kapt")
+    alias(libs.plugins.androidx.navigation.safeargs)
 }
 
 android {
@@ -64,5 +65,13 @@ dependencies {
     kapt("androidx.room:room-compiler:2.6.1")
     //lottie
     implementation ("com.airbnb.android:lottie:6.0.0")
+    //circle imageview
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
+    //
+    implementation ("io.github.cymchad:BaseRecyclerViewAdapterHelper4:4.1.4")
+    //glide
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
+    //gson
+    implementation ("com.google.code.gson:gson:2.10.1")
 
 }

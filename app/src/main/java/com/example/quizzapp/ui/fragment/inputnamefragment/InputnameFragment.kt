@@ -27,7 +27,7 @@ class InputnameFragment : Fragment() {
     private val userViewModel: UserViewModel by lazy {
         ViewModelProvider(
             this,
-            UserViewModel.UserViewModelFactory(requireActivity().application)
+            UserViewModel.UserViewModelFactory(requireActivity().application, SavedStateHandle())
         )[UserViewModel::class.java]
     }
     override fun onCreateView(
