@@ -53,5 +53,11 @@
         <action
             android:id="@+id/action_playFragment_to_winFragment"
             app:destination="@id/winFragment" />
+        <argument
+            android:name="IdQuestionCategory"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_playFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 </navigation>
